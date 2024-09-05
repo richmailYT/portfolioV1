@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+html, body {
+    background-color: rgb(6, 6, 6);
+}
+body {
+    color: rgb(247, 248, 248);
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px;
+    width: 90vw;
+    max-width: 1800px;
+
+    margin: auto;
+    margin-bottom: 0px;
+
+    border-radius: 10px;
+    background-color: rgb(22, 22, 22);
+    border: solid 1px rgb(130, 143, 255);
+    // box-shadow: 0 0 10px rgb(130, 143, 255);
+
+    .header {
+        display: block;
+    }
+
+    .welcome {
+        font-size: 2.8rem;
+        h1 {
+            background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(155deg, rgb(130, 145, 228) 10%, rgb(100, 246, 202) 50%, rgb(100, 246, 202) 90%, rgb(220, 67, 85))
+        }
+    }
+
+    .contact {
+        display: flex;
+        height: fit-content;
+
+        padding: 10px;
+
+        border-radius: 10px;
+        background-color: rgb(37, 37, 37);
+    }
+}
+
+.about-me {
+    min-height: fit-content;
+    max-height: fit-content;
+    width: 90vw;
+    max-width: 1800px;
+
+    padding: 10px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+
+    border-radius: 10px;
+    background-color: rgb(22, 22, 22);
+
+    p {
+        font-size: 22px;
+    }
+}
+
+.skills {
+    padding: 30px;
+    width: 90vw;
+    max-width: 1800px;
+
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    border-radius: 10px;
+    background-color: rgb(22, 22, 22);
+    border: solid 1px rgb(130, 143, 255);
+    // box-shadow: 0 0 10px rgb(130, 143, 255);
+    
+    //wraps all the skill items
+    .wrapper {
+        display: flex;
+        padding: 30px;
+        gap: 4rem;
+        .section {
+            flex: 1;
+            min-height: fit-content;
+            .container {
+                display: grid;
+    
+                height: 90%;
+        
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(1, 1fr); 
+    
+                gap: 3rem;
+        
+                .item {
+                    position: relative;
+                    min-height: fit-content;
+                    padding: 10px;
+                    border-radius: 10px;
+                    background-color: transparent;
+            
+                    text-align: center;
+            
+                    border-radius: 10px;
+                    background-color: rgb(22, 22, 22);
+                    border: solid 1px #203c4c;
+
+                    box-shadow: 0 0 10px #203c4c;
+                    .details {
+                        margin: 3rem;
+                        p {
+                            font-size: 2rem;
+                        }
+                    }
+            
+                    h1 {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//if you have more than 2 items
+// @media (max-width: 1000px) {
+//     .skills {
+//         grid-template-rows: repeat(2, 1fr); 
+//     }
+// }
+
+//if you have 2 items
+@media (max-width: 720px) {
+    body {
+        grid-template-rows: 2fr 1fr 8fr; 
+    }
+
+    header {
+        .welcome {
+            font-size: 2rem;
+        }
+    }
+
+    .about-me {
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+}
